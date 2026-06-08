@@ -34,8 +34,6 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
-
-
   projects: [
     {
       name:'setup',
@@ -43,10 +41,11 @@ export default defineConfig({
     },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] ,
+      use: {
+        ...devices['Desktop Chrome'],
         storageState:'.auth/user.json'
       },
-      dependencies:['setup'],
+      dependencies:['setup']
     },
 
     // {
